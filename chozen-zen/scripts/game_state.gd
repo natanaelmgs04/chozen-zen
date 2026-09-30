@@ -9,6 +9,10 @@ const REPUTATION_MIN := 0
 
 var reputation: int = REPUTATION_MAX
 
+func reset() -> void:
+	reputation = REPUTATION_MAX
+	reputation_changed.emit(reputation)
+
 func apply_reputation_delta(delta: int) -> void:
 	reputation = clampi(reputation + delta, REPUTATION_MIN, REPUTATION_MAX)
 	reputation_changed.emit(reputation)

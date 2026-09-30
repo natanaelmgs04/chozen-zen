@@ -5,6 +5,7 @@ extends Node2D
 ## "Perguntas em aberto" sobre o primeiro evento do protótipo).
 
 const EVENTO_MAE := {
+	"titulo": "Fase 1 — Família: Conversando com a mãe",
 	"contexto": "Você chega em casa depois de um dia cansativo. Sua mãe percebe que você está diferente e pergunta se aconteceu alguma coisa. Você não está muito a fim de conversar. O que você faz?",
 	"opcoes": [
 		{
@@ -30,8 +31,8 @@ const EVENTO_MAE := {
 	],
 }
 
-@onready var mae: StaticBody2D = $Mae
-@onready var player: CharacterBody2D = $Player
+@onready var mae: CharacterBody2D = $Entities/Mae
+@onready var player: CharacterBody2D = $Entities/Player
 @onready var decision_ui: CanvasLayer = $DecisionUI
 
 func _ready() -> void:

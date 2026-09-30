@@ -1,10 +1,10 @@
 extends CharacterBody2D
 
-const SPEED := 110.0
+const SPEED := 130.0
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
-var _facing := "down"
+var _facing := "up"
 var _input_locked := false
 
 func _ready() -> void:

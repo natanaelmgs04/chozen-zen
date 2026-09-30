@@ -5,10 +5,13 @@ extends CanvasLayer
 
 signal closed
 
-@onready var context_label: Label = $Backdrop/Panel/Margin/VBox/ContextLabel
-@onready var options_container: VBoxContainer = $Backdrop/Panel/Margin/VBox/OptionsContainer
-@onready var feedback_label: Label = $Backdrop/Panel/Margin/VBox/FeedbackLabel
-@onready var continue_button: Button = $Backdrop/Panel/Margin/VBox/ContinueButton
+const OPTION_LETTERS := ["A", "B", "C", "D"]
+
+@onready var title_label: Label = %TitleLabel
+@onready var context_label: Label = %ContextLabel
+@onready var options_container: VBoxContainer = %OptionsContainer
+@onready var feedback_label: Label = %FeedbackLabel
+@onready var continue_button: Button = %ContinueButton
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -18,18 +21,23 @@ func _ready() -> void:
 	continue_button.pressed.connect(_on_continue_pressed)
 
 func show_event(event_data: Dictionary) -> void:
+	title_label.text = event_data.get("titulo", "")
 	context_label.text = event_data.get("contexto", "")
 	feedback_label.visible = false
 	continue_button.visible = false
 	for child in options_container.get_children():
 		child.queue_free()
-	for opcao in event_data.get("opcoes", []):
+	var opcoes: Array = event_data.get("opcoes", [])
+	for i in opcoes.size():
 		var button := Button.new()
-		button.text = opcao["texto"]
-		button.pressed.connect(_on_option_pressed.bind(opcao))
+		button.text = "%s) %s" % [OPTION_LETTERS[i], opcoes[i]["texto"]]
+		button.alignment = HORIZONTAL_ALIGNMENT_LEFT
+		button.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		button.pressed.connect(_on_option_pressed.bind(opcoes[i]))
 		options_container.add_child(button)
 	visible = true
 	get_tree().paused = true
+	options_container.get_child(0).grab_focus.call_deferred()
 
 func _on_option_pressed(opcao: Dictionary) -> void:
 	for child in options_container.get_children():
@@ -41,6 +49,7 @@ func _on_option_pressed(opcao: Dictionary) -> void:
 	]
 	feedback_label.visible = true
 	continue_button.visible = true
+	continue_button.grab_focus()
 
 func _on_continue_pressed() -> void:
 	visible = false

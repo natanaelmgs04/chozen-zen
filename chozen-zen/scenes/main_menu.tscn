@@ -1,0 +1,141 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/maps/fase1_casa.png" id="2"]
+[ext_resource type="SpriteFrames" path="res://assets/sprites/mae/mae_frames.tres" id="3"]
+[ext_resource type="SpriteFrames" path="res://assets/sprites/jogador/jogador_frames.tres" id="4"]
+
+[sub_resource type="Gradient" id="Gradient_1"]
+offsets = PackedFloat32Array(0, 0.55, 1)
+colors = PackedColorArray(0.08, 0.05, 0.035, 0.95, 0.08, 0.05, 0.035, 0.7, 0.08, 0.05, 0.035, 0.25)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1"]
+gradient = SubResource("Gradient_1")
+width = 256
+height = 16
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="Fundo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Sombra" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_1")
+expand_mode = 1
+
+[node name="Personagens" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -430.0
+offset_top = -110.0
+offset_right = -430.0
+offset_bottom = -110.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Mae" type="AnimatedSprite2D" parent="Personagens"]
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("3")
+animation = &"idle_right"
+autoplay = "idle_right"
+offset = Vector2(0, -65)
+
+[node name="Jogador" type="AnimatedSprite2D" parent="Personagens"]
+position = Vector2(230, 0)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("4")
+animation = &"idle_left"
+autoplay = "idle_left"
+offset = Vector2(0, -61)
+
+[node name="Conteudo" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 96
+theme_override_constants/margin_top = 72
+theme_override_constants/margin_right = 96
+theme_override_constants/margin_bottom = 56
+
+[node name="Coluna" type="VBoxContainer" parent="Conteudo"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Titulo" type="Label" parent="Conteudo/Coluna"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.961, 0.902, 0.784, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 76
+text = "CHOZEN ZEN"
+
+[node name="Subtitulo" type="Label" parent="Conteudo/Coluna"]
+custom_minimum_size = Vector2(520, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.878, 0.788, 0.627, 1)
+theme_override_font_sizes/font_size = 20
+text = "Suas escolhas constroem — ou destroem — sua reputação."
+autowrap_mode = 3
+
+[node name="Espaco" type="Control" parent="Conteudo/Coluna"]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+
+[node name="PlayButton" type="Button" parent="Conteudo/Coluna"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(280, 56)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 24
+text = "Jogar"
+
+[node name="QuitButton" type="Button" parent="Conteudo/Coluna"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(280, 56)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 24
+text = "Sair"
+
+[node name="Rodape" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -40.0
+offset_right = 824.0
+offset_bottom = -14.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.878, 0.788, 0.627, 0.75)
+theme_override_font_sizes/font_size = 14
+text = "Protótipo · Ciclo 1   |   WASD / Setas: mover   ·   E: interagir"

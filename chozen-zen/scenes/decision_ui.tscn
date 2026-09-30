@@ -10,7 +10,9 @@ script = ExtResource("1")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color(0, 0, 0, 0.55)
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05, 0.03, 0.02, 0.6)
 
 [node name="Panel" type="PanelContainer" parent="Backdrop"]
 anchors_preset = 8
@@ -18,35 +20,40 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -260.0
-offset_top = -170.0
-offset_right = 260.0
-offset_bottom = 170.0
+offset_left = -330.0
+offset_top = -120.0
+offset_right = 330.0
+offset_bottom = 120.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Margin" type="MarginContainer" parent="Backdrop/Panel"]
-theme_override_constants/margin_left = 24
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 24
-theme_override_constants/margin_bottom = 20
-
-[node name="VBox" type="VBoxContainer" parent="Backdrop/Panel/Margin"]
+[node name="VBox" type="VBoxContainer" parent="Backdrop/Panel"]
 theme_override_constants/separation = 14
 
-[node name="ContextLabel" type="Label" parent="Backdrop/Panel/Margin/VBox"]
-custom_minimum_size = Vector2(460, 0)
+[node name="TitleLabel" type="Label" parent="Backdrop/Panel/VBox"]
+unique_name_in_owner = true
+theme_override_colors/font_color = Color(0.949, 0.78, 0.463, 1)
+theme_override_font_sizes/font_size = 20
+text = "..."
+
+[node name="ContextLabel" type="Label" parent="Backdrop/Panel/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(620, 0)
 autowrap_mode = 3
 text = "..."
 
-[node name="OptionsContainer" type="VBoxContainer" parent="Backdrop/Panel/Margin/VBox"]
+[node name="OptionsContainer" type="VBoxContainer" parent="Backdrop/Panel/VBox"]
+unique_name_in_owner = true
 theme_override_constants/separation = 8
 
-[node name="FeedbackLabel" type="Label" parent="Backdrop/Panel/Margin/VBox"]
-custom_minimum_size = Vector2(460, 0)
+[node name="FeedbackLabel" type="Label" parent="Backdrop/Panel/VBox"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(620, 0)
 autowrap_mode = 3
-visible = false
 
-[node name="ContinueButton" type="Button" parent="Backdrop/Panel/Margin/VBox"]
-text = "Continuar"
+[node name="ContinueButton" type="Button" parent="Backdrop/Panel/VBox"]
+unique_name_in_owner = true
 visible = false
+size_flags_horizontal = 8
+text = "Continuar"

@@ -1,7 +1,7 @@
 # 002 — Movimento Livre e Interação de Cenário
 
 **Sessão de origem:** implementação da Fase 1 (Família) — expansão de escopo confirmada pelo aluno em 2026-09-23.
-**Última atualização:** 2026-09-23
+**Última atualização:** 2026-09-30
 **Status geral:** rascunho
 
 ## Objetivo
@@ -14,7 +14,7 @@ Permitir que o jogador controle diretamente um avatar em movimento livre por um 
 
 ## Fora do escopo
 
-- IA de NPCs (a mãe não se move; apenas fica parada e reage por proximidade).
+- ~~IA de NPCs (a mãe não se move; apenas fica parada e reage por proximidade).~~ **Atualização (2026-09-30):** o aluno pediu que a mãe se movimente — ver RF-MOV-003. Continua fora do escopo: IA com rotina, pathfinding ou reação a outros eventos.
 - Múltiplos NPCs ou objetos interativos simultâneos — este incremento cobre uma interação (mãe) em uma cena.
 - Colisão fina por pixel — caixas de colisão retangulares/circulares aproximadas são suficientes para o blockout.
 
@@ -33,8 +33,9 @@ O jogador controla diretamente um avatar que se move livremente pelo cenário us
 - Dado que o jogador pressiona uma tecla de direção, quando o personagem se move, então a animação de "andando" correspondente à direção é exibida.
 - Dado que o jogador solta as teclas de direção, quando o personagem para, então a animação de "parado" correspondente à última direção enfrentada é exibida.
 - Dado que o personagem colide com uma parede ou objeto do cenário, quando tenta atravessar, então o movimento é bloqueado nessa direção.
+- Dado que o jogador encosta em outro personagem, quando os dois estão próximos, então eles não se sobrepõem a ponto de parecer que um entra no outro, e quem está mais abaixo na tela aparece na frente.
 
-**Origem:** aluno — confirmado ao pedir o protótipo da Fase 1 com o personagem andando até a mãe.
+**Origem:** aluno — confirmado ao pedir o protótipo da Fase 1 com o personagem andando até a mãe. Critério de sobreposição adicionado em 2026-09-30 após o aluno relatar que o jogador "entrava dentro" da mãe.
 
 ### RF-MOV-002 — Interação por proximidade dispara evento
 
@@ -52,6 +53,22 @@ Quando o jogador se aproxima de um NPC interativo, um indicador visual aparece; 
 - Dado que o jogador já conversou com o NPC nesta sessão, quando se aproxima novamente, então o evento não é disparado de novo (conversa única no protótipo).
 
 **Origem:** aluno — a cena da Fase 1 (Família) exige aproximar-se da mãe para a conversa acontecer.
+
+### RF-MOV-003 — NPC se movimenta pelo cenário
+
+**Prioridade:** DEVE
+**Status:** CONFIRMADO
+**Depende de:** RF-MOV-001
+
+A mãe não fica estática: circula entre alguns pontos da casa, com pausas, usando as animações de andar/parado. Quando o jogador entra na área de interação, ela para e se vira para ele.
+
+**Critérios de aceitação**
+
+- Dado que o jogador não está perto, quando o tempo passa, então a mãe alterna entre andar até um ponto da casa e ficar parada.
+- Dado que o jogador entra na área de interação, quando isso ocorre, então a mãe para de andar e fica virada na direção do jogador.
+- Dado que algo bloqueia o caminho da mãe (ex.: o jogador), quando ela não consegue chegar ao ponto, então desiste e escolhe outro, sem travar.
+
+**Origem:** aluno (2026-09-30) — "ela está parada e estática e fica meio sem sentido".
 
 ## Alternativas descartadas
 
