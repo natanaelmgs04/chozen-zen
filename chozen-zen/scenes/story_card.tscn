@@ -1,0 +1,69 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/story_card.gd" id="1"]
+
+[node name="StoryCard" type="CanvasLayer"]
+layer = 15
+script = ExtResource("1")
+
+[node name="Backdrop" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.067, 0.133, 0.106, 0.7)
+
+[node name="Panel" type="PanelContainer" parent="Backdrop"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -380.0
+offset_top = -160.0
+offset_right = 380.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="Backdrop/Panel"]
+theme_override_constants/separation = 12
+
+[node name="CardTitle" type="Label" parent="Backdrop/Panel/VBox"]
+unique_name_in_owner = true
+theme_type_variation = &"TitleLabel"
+theme_override_font_sizes/font_size = 32
+text = "..."
+horizontal_alignment = 1
+
+[node name="CardSubtitle" type="Label" parent="Backdrop/Panel/VBox"]
+unique_name_in_owner = true
+theme_type_variation = &"AccentLabel"
+theme_override_font_sizes/font_size = 20
+text = "..."
+horizontal_alignment = 1
+
+[node name="Separator" type="HSeparator" parent="Backdrop/Panel/VBox"]
+theme_override_constants/separation = 8
+
+[node name="CardBody" type="RichTextLabel" parent="Backdrop/Panel/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(716, 0)
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+theme_override_constants/line_separation = 4
+text = "..."
+
+[node name="CardFooter" type="Label" parent="Backdrop/Panel/VBox"]
+unique_name_in_owner = true
+theme_type_variation = &"AccentLabel"
+theme_override_font_sizes/font_size = 15
+text = "..."
+horizontal_alignment = 1
+
+[node name="CardButtons" type="HBoxContainer" parent="Backdrop/Panel/VBox"]
+unique_name_in_owner = true
+theme_override_constants/separation = 16
+alignment = 1

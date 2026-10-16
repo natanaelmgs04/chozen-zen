@@ -1,0 +1,648 @@
+{
+ "tamanho": [
+  1536,
+  1024
+ ],
+ "fundo": "res://assets/casa/fundo.png",
+ "objetos": [
+  {
+   "nome": "sofa",
+   "png": "res://assets/casa/sofa.png",
+   "pos": [
+    456,
+    512
+   ],
+   "offset": [
+    0,
+    -72
+   ],
+   "colisao": [
+    460,
+    472,
+    304,
+    120
+   ],
+   "interacao": {
+    "tipo": "sentar",
+    "texto": "[E] Sentar no sofá",
+    "zona": [
+     448,
+     600,
+     328,
+     56
+    ]
+   },
+   "assentos": [
+    {
+     "pos": [
+      512,
+      584
+     ],
+     "dir": "down",
+     "saida": [
+      512,
+      632
+     ]
+    },
+    {
+     "pos": [
+      608,
+      584
+     ],
+     "dir": "down",
+     "saida": [
+      608,
+      632
+     ]
+    },
+    {
+     "pos": [
+      704,
+      584
+     ],
+     "dir": "down",
+     "saida": [
+      704,
+      632
+     ]
+    }
+   ]
+  },
+  {
+   "nome": "mesa_centro",
+   "png": "res://assets/casa/mesa_centro.png",
+   "pos": [
+    508,
+    744
+   ],
+   "offset": [
+    0,
+    -72
+   ],
+   "colisao": [
+    512,
+    688,
+    200,
+    64
+   ]
+  },
+  {
+   "nome": "abajur",
+   "png": "res://assets/casa/abajur.png",
+   "pos": [
+    300,
+    444
+   ],
+   "offset": [
+    0,
+    -188
+   ],
+   "colisao": [
+    308,
+    424,
+    44,
+    28
+   ],
+   "interacao": {
+    "tipo": "abajur",
+    "texto": "[E] Acender/apagar o abajur",
+    "zona": [
+     272,
+     416,
+     112,
+     88
+    ]
+   },
+   "alternativo": "res://assets/casa/abajur_aceso.png"
+  },
+  {
+   "nome": "planta_canto",
+   "png": "res://assets/casa/planta_grande.png",
+   "pos": [
+    144,
+    916
+   ],
+   "offset": [
+    0,
+    -132
+   ],
+   "colisao": [
+    152,
+    880,
+    80,
+    40
+   ],
+   "interacao": {
+    "tipo": "texto",
+    "texto": "[E] Olhar a planta",
+    "zona": [
+     144,
+     832,
+     120,
+     104
+    ],
+    "falas": [
+     "A samambaia da sua mãe. Ela conversa com essa planta todo dia.",
+     "Alguém esqueceu de regar. Provavelmente você."
+    ]
+   }
+  },
+  {
+   "nome": "planta_entrada",
+   "png": "res://assets/casa/planta_pequena.png",
+   "pos": [
+    1236,
+    916
+   ],
+   "offset": [
+    0,
+    -92
+   ],
+   "colisao": [
+    1244,
+    888,
+    48,
+    32
+   ]
+  },
+  {
+   "nome": "planta_estante",
+   "png": "res://assets/casa/planta_pequena.png",
+   "pos": [
+    384,
+    228
+   ],
+   "offset": [
+    0,
+    -92
+   ],
+   "colisao": [
+    392,
+    200,
+    48,
+    32
+   ]
+  },
+  {
+   "nome": "geladeira",
+   "png": "res://assets/casa/geladeira.png",
+   "pos": [
+    512,
+    228
+   ],
+   "offset": [
+    0,
+    -212
+   ],
+   "colisao": [
+    512,
+    160,
+    88,
+    72
+   ],
+   "alternativo": "res://assets/casa/geladeira_aberta.png"
+  },
+  {
+   "nome": "relogio",
+   "png": "res://assets/casa/relogio.png",
+   "pos": [
+    408,
+    0
+   ],
+   "offset": [
+    0,
+    56
+   ],
+   "decoracao": "relogio"
+  },
+  {
+   "nome": "mesa_jantar",
+   "png": "res://assets/casa/mesa_jantar.png",
+   "pos": [
+    1048,
+    532
+   ],
+   "offset": [
+    0,
+    -132
+   ],
+   "colisao": [
+    1048,
+    432,
+    256,
+    104
+   ],
+   "alternativo": "res://assets/casa/mesa_jantar_comida.png"
+  },
+  {
+   "nome": "cadeira_e",
+   "png": "res://assets/casa/cadeira_lado.png",
+   "pos": [
+    988,
+    488
+   ],
+   "offset": [
+    0,
+    -72
+   ],
+   "colisao": [
+    992,
+    464,
+    48,
+    32
+   ],
+   "assento": {
+    "pos": [
+     1012,
+     500
+    ],
+    "dir": "right",
+    "saida": [
+     984,
+     560
+    ]
+   }
+  },
+  {
+   "nome": "cadeira_d",
+   "png": "res://assets/casa/cadeira_lado_d.png",
+   "pos": [
+    1308,
+    488
+   ],
+   "offset": [
+    0,
+    -72
+   ],
+   "colisao": [
+    1312,
+    464,
+    48,
+    32
+   ],
+   "assento": {
+    "pos": [
+     1336,
+     500
+    ],
+    "dir": "left",
+    "saida": [
+     1360,
+     560
+    ]
+   }
+  },
+  {
+   "nome": "cadeira_c1",
+   "png": "res://assets/casa/cadeira_cima.png",
+   "pos": [
+    1088,
+    400
+   ],
+   "offset": [
+    0,
+    -56
+   ],
+   "colisao": [
+    1088,
+    384,
+    56,
+    24
+   ],
+   "assento": {
+    "pos": [
+     1116,
+     420
+    ],
+    "dir": "down",
+    "saida": [
+     1116,
+     328
+    ]
+   }
+  },
+  {
+   "nome": "cadeira_c2",
+   "png": "res://assets/casa/cadeira_cima.png",
+   "pos": [
+    1184,
+    400
+   ],
+   "offset": [
+    0,
+    -56
+   ],
+   "colisao": [
+    1184,
+    384,
+    56,
+    24
+   ],
+   "assento": {
+    "pos": [
+     1212,
+     420
+    ],
+    "dir": "down",
+    "saida": [
+     1212,
+     328
+    ]
+   }
+  },
+  {
+   "nome": "cadeira_b1",
+   "png": "res://assets/casa/cadeira_baixo.png",
+   "pos": [
+    1088,
+    608
+   ],
+   "offset": [
+    0,
+    -72
+   ],
+   "colisao": [
+    1088,
+    560,
+    56,
+    40
+   ],
+   "assento": {
+    "pos": [
+     1116,
+     588
+    ],
+    "dir": "up",
+    "saida": [
+     1116,
+     648
+    ]
+   }
+  },
+  {
+   "nome": "cadeira_b2",
+   "png": "res://assets/casa/cadeira_baixo.png",
+   "pos": [
+    1184,
+    608
+   ],
+   "offset": [
+    0,
+    -72
+   ],
+   "colisao": [
+    1184,
+    560,
+    56,
+    40
+   ],
+   "assento": {
+    "pos": [
+     1212,
+     588
+    ],
+    "dir": "up",
+    "saida": [
+     1212,
+     648
+    ]
+   }
+  },
+  {
+   "nome": "tv_tela",
+   "png": "res://assets/casa/tv_tela.png",
+   "pos": [
+    156,
+    0
+   ],
+   "offset": [
+    0,
+    408
+   ],
+   "decoracao": "tv"
+  }
+ ],
+ "paredes": [
+  [
+   0,
+   0,
+   136,
+   1024
+  ],
+  [
+   1392,
+   0,
+   144,
+   1024
+  ],
+  [
+   136,
+   0,
+   1256,
+   228
+  ],
+  [
+   480,
+   0,
+   24,
+   356
+  ],
+  [
+   952,
+   0,
+   24,
+   356
+  ],
+  [
+   136,
+   928,
+   968,
+   96
+  ],
+  [
+   1200,
+   928,
+   336,
+   96
+  ],
+  [
+   1080,
+   1008,
+   144,
+   16
+  ],
+  [
+   600,
+   120,
+   348,
+   112
+  ],
+  [
+   140,
+   480,
+   68,
+   236
+  ],
+  [
+   140,
+   392,
+   60,
+   88
+  ],
+  [
+   176,
+   184,
+   204,
+   56
+  ],
+  [
+   1320,
+   184,
+   68,
+   120
+  ]
+ ],
+ "interacoes": [
+  {
+   "tipo": "tv",
+   "texto": "[E] Ligar/desligar a TV",
+   "zona": [
+    208,
+    448,
+    80,
+    224
+   ]
+  },
+  {
+   "tipo": "texto",
+   "texto": "[E] Olhar a estante",
+   "zona": [
+    176,
+    232,
+    200,
+    48
+   ],
+   "falas": [
+    "Os livros da faculdade da sua mãe. Ela nunca terminou o curso.",
+    "Um álbum de fotos com a etiqueta \"bebê\". O bebê é você."
+   ]
+  },
+  {
+   "tipo": "texto",
+   "texto": "[E] Olhar a foto",
+   "zona": [
+    1200,
+    216,
+    96,
+    48
+   ],
+   "falas": [
+    "Vocês três na praia, no ano passado. Todo mundo sorrindo.",
+    "Na foto você ainda tinha o dente da frente lascado."
+   ]
+  },
+  {
+   "tipo": "texto",
+   "texto": "[E] Olhar o fogão",
+   "zona": [
+    816,
+    224,
+    96,
+    40
+   ],
+   "falas": [
+    "Cheiro de arroz e feijão. Sua mãe cozinhou mesmo cansada."
+   ]
+  },
+  {
+   "tipo": "pia",
+   "texto": "[E] Beber um copo d'água",
+   "zona": [
+    680,
+    224,
+    88,
+    40
+   ],
+   "falas": [
+    "Água gelada. Ajuda a pensar.",
+    "Mais um copo d'água."
+   ]
+  }
+ ],
+ "luzes": {
+  "Abajur": [
+   328,
+   288
+  ],
+  "Jantar": [
+   1176,
+   448
+  ],
+  "Cozinha": [
+   728,
+   160
+  ],
+  "Corredor": [
+   1120,
+   240
+  ]
+ },
+ "zonas": {
+  "Geladeira": [
+   556,
+   256,
+   120,
+   64
+  ],
+  "Jantar": [
+   1176,
+   488,
+   440,
+   336
+  ],
+  "Quarto": [
+   1120,
+   264,
+   160,
+   56
+  ]
+ },
+ "mae_caminho": [
+  [
+   600,
+   400
+  ],
+  [
+   820,
+   380
+  ],
+  [
+   860,
+   600
+  ],
+  [
+   360,
+   560
+  ],
+  [
+   1000,
+   700
+  ]
+ ],
+ "mae_jantar": [
+  [
+   960,
+   600
+  ],
+  [
+   984,
+   560
+  ],
+  [
+   1012,
+   500
+  ]
+ ],
+ "assento_mae_jantar": "cadeira_e",
+ "assento_jogador_jantar": "cadeira_d"
+}

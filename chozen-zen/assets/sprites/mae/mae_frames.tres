@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=33 format=3]
+[gd_resource type="SpriteFrames" load_steps=45 format=3]
 
 [ext_resource type="Texture2D" path="res://assets/sprites/mae/idle_down_0.png" id="1"]
 [ext_resource type="Texture2D" path="res://assets/sprites/mae/idle_down_1.png" id="2"]
@@ -32,6 +32,18 @@
 [ext_resource type="Texture2D" path="res://assets/sprites/mae/walk_right_1.png" id="30"]
 [ext_resource type="Texture2D" path="res://assets/sprites/mae/walk_right_2.png" id="31"]
 [ext_resource type="Texture2D" path="res://assets/sprites/mae/walk_right_3.png" id="32"]
+[ext_resource type="Texture2D" path="res://assets/sprites/mae/sit_down_0.png" id="33"]
+[ext_resource type="Texture2D" path="res://assets/sprites/mae/sit_down_1.png" id="34"]
+[ext_resource type="Texture2D" path="res://assets/sprites/mae/sit_up_0.png" id="35"]
+[ext_resource type="Texture2D" path="res://assets/sprites/mae/sit_up_1.png" id="36"]
+[ext_resource type="Texture2D" path="res://assets/sprites/mae/sit_left_0.png" id="37"]
+[ext_resource type="Texture2D" path="res://assets/sprites/mae/sit_left_1.png" id="38"]
+[ext_resource type="Texture2D" path="res://assets/sprites/mae/sit_right_0.png" id="39"]
+[ext_resource type="Texture2D" path="res://assets/sprites/mae/sit_right_1.png" id="40"]
+[ext_resource type="Texture2D" path="res://assets/sprites/mae/eat_left_0.png" id="41"]
+[ext_resource type="Texture2D" path="res://assets/sprites/mae/eat_left_1.png" id="42"]
+[ext_resource type="Texture2D" path="res://assets/sprites/mae/eat_right_0.png" id="43"]
+[ext_resource type="Texture2D" path="res://assets/sprites/mae/eat_right_1.png" id="44"]
 
 [resource]
 animations = [{
@@ -170,4 +182,70 @@ animations = [{
 "loop": true,
 "name": &"walk_right",
 "speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34")
+}],
+"loop": true,
+"name": &"sit_down",
+"speed": 1.2
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36")
+}],
+"loop": true,
+"name": &"sit_up",
+"speed": 1.2
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38")
+}],
+"loop": true,
+"name": &"sit_left",
+"speed": 1.2
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("39")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40")
+}],
+"loop": true,
+"name": &"sit_right",
+"speed": 1.2
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42")
+}],
+"loop": true,
+"name": &"eat_left",
+"speed": 2.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("43")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44")
+}],
+"loop": true,
+"name": &"eat_right",
+"speed": 2.5
 }]

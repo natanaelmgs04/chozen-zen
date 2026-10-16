@@ -12,7 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.05, 0.03, 0.02, 0.6)
+color = Color(0.067, 0.133, 0.106, 0.55)
 
 [node name="Panel" type="PanelContainer" parent="Backdrop"]
 anchors_preset = 8
@@ -20,9 +20,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -330.0
+offset_left = -350.0
 offset_top = -120.0
-offset_right = 330.0
+offset_right = 350.0
 offset_bottom = 120.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -32,13 +32,13 @@ theme_override_constants/separation = 14
 
 [node name="TitleLabel" type="Label" parent="Backdrop/Panel/VBox"]
 unique_name_in_owner = true
-theme_override_colors/font_color = Color(0.949, 0.78, 0.463, 1)
-theme_override_font_sizes/font_size = 20
+theme_type_variation = &"TitleLabel"
+theme_override_font_sizes/font_size = 24
 text = "..."
 
 [node name="ContextLabel" type="Label" parent="Backdrop/Panel/VBox"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(620, 0)
+custom_minimum_size = Vector2(656, 0)
 autowrap_mode = 3
 text = "..."
 
@@ -46,14 +46,21 @@ text = "..."
 unique_name_in_owner = true
 theme_override_constants/separation = 8
 
-[node name="FeedbackLabel" type="Label" parent="Backdrop/Panel/VBox"]
+[node name="FeedbackBox" type="VBoxContainer" parent="Backdrop/Panel/VBox"]
 unique_name_in_owner = true
 visible = false
-custom_minimum_size = Vector2(620, 0)
+theme_override_constants/separation = 12
+
+[node name="FeedbackLabel" type="Label" parent="Backdrop/Panel/VBox/FeedbackBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(656, 0)
 autowrap_mode = 3
 
-[node name="ContinueButton" type="Button" parent="Backdrop/Panel/VBox"]
+[node name="EffectsLabel" type="Label" parent="Backdrop/Panel/VBox/FeedbackBox"]
 unique_name_in_owner = true
-visible = false
+theme_type_variation = &"AccentLabel"
+
+[node name="ContinueButton" type="Button" parent="Backdrop/Panel/VBox/FeedbackBox"]
+unique_name_in_owner = true
 size_flags_horizontal = 8
 text = "Continuar"

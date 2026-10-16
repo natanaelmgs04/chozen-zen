@@ -1,6 +1,6 @@
 # Visão Geral
 
-> Nome do projeto ainda não definido. "SimuladorDeVida" é um nome de pasta provisório — pode ser renomeado quando o grupo decidir um título.
+> **Atualização (2026-10-16):** o nome do jogo é **ChosenZen** ("Cada escolha, uma nova história."), do **Estúdio Vívido**. "SimuladorDeVida" segue só como nome de pasta. Ver [GDD](../gdd.md).
 
 ## Pitch
 Um simulador de vida em que as escolhas do jogador constroem ou destroem sua reputação na sociedade, através de decisões que testam seu caráter.

@@ -1,7 +1,16 @@
 # Glossário
 
 ## Reputação
-Medida de como a sociedade simulada vê o jogador. Sobe ou desce de acordo com as decisões tomadas. Ainda não definida numericamente nem em regras de variação.
+Medida de como a sociedade simulada vê o jogador. Barra de 0% a 100%, começa em 100% e sobe, desce ou fica igual a cada decisão. Vale pela vida toda.
+
+## Energia
+Recurso do capítulo (0 a 100). Ser atencioso gasta Energia; sem Energia suficiente, a opção fica bloqueada; com 0, o personagem apaga e o capítulo acaba antes.
+
+## Capítulo
+Uma situação jogável com objetivo próprio, dividida em momentos (ex.: Fase 1 — Família: "Uma noite em casa"). Termina com o resumo do dia.
+
+## Memória
+Registro de uma escolha feita ("contou para a mãe", "estudou"...). Muda os eventos seguintes e o resumo, e leva a história para o próximo capítulo.
 
 ## Caráter
 Status separado da Reputação, relacionado à integridade das escolhas do jogador. Decisões que "comprometem o caráter" são o principal risco/obstáculo do jogo. A relação exata entre Caráter e Reputação ainda é uma pergunta em aberto.

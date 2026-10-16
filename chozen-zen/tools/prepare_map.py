@@ -10,7 +10,7 @@ brancos internos como a luz do abajur ou o piso da cozinha.
 from pathlib import Path
 
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageFilter
 from scipy import ndimage
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -20,8 +20,24 @@ OUT = ROOT / "assets" / "maps" / "fase1_casa.png"
 WHITE_THRESHOLD = 225
 
 
+PIXEL_SIZE = 4
+PALETTE_COLORS = 128
+
+
+def clean_pixel_art(img: Image.Image) -> Image.Image:
+    """Tira a 'cara de IA': remove ruído de JPG, alinha tudo a uma grade única de
+    PIXEL_SIZE e limita a paleta (sem dithering)."""
+    w, h = img.size
+    den = img.filter(ImageFilter.MedianFilter(3))
+    small = den.resize((w // PIXEL_SIZE, h // PIXEL_SIZE), Image.BOX)
+    small = small.quantize(colors=PALETTE_COLORS, method=Image.Quantize.MEDIANCUT, kmeans=4,
+                           dither=Image.Dither.NONE).convert("RGB")
+    return small.resize((w, h), Image.NEAREST)
+
+
 def main() -> None:
-    rgb = np.asarray(Image.open(SRC).convert("RGB"))
+    original = Image.open(SRC).convert("RGB")
+    rgb = np.asarray(clean_pixel_art(original))
     near_white = (rgb >= WHITE_THRESHOLD).all(axis=2)
 
     labels, _ = ndimage.label(near_white)

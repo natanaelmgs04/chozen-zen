@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ChosenZen — Press Kit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green-dark: #1f4b3b; --green: #2f6b52; --rose: #d9878a; --rose-dark: #b9616a;
+    --peach: #f4b183; --cream: #fbf5ec; --cream-edge: #eadcc8; --ink: #1f4b3b;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--cream); color: var(--ink); font-family: Quicksand, system-ui, sans-serif; font-weight: 500; line-height: 1.6; }
+  header { background: url("banner_1920x480.png") center/cover no-repeat; min-height: 300px; }
+  main { max-width: 1040px; margin: 0 auto; padding: 32px 16px 64px; display: grid; grid-template-columns: 280px 1fr; gap: 40px; }
+  aside { position: sticky; top: 24px; align-self: start; }
+  h1 { font-size: 2.2rem; margin: 0 0 4px; }
+  h2 { font-size: 1.35rem; margin: 40px 0 12px; padding-bottom: 6px; border-bottom: 2px solid var(--cream-edge); }
+  .tagline { color: var(--rose-dark); font-weight: 700; margin: 0 0 24px; }
+  dl { margin: 0; }
+  dt { font-weight: 700; color: var(--rose-dark); font-size: .85rem; text-transform: uppercase; letter-spacing: .04em; margin-top: 14px; }
+  dd { margin: 2px 0 0; }
+  a { color: var(--green); font-weight: 700; }
+  ul { padding-left: 20px; }
+  li { margin: 6px 0; }
+  .shots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .shots a img, .logos img { width: 100%; display: block; border-radius: 12px; border: 3px solid var(--cream-edge); }
+  .logos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; align-items: end; }
+  .logos figure { margin: 0; text-align: center; font-size: .9rem; }
+  .logos img { background: #fff; padding: 12px; }
+  blockquote { margin: 0; padding: 16px 20px; background: #fff; border-left: 4px solid var(--rose); border-radius: 8px; }
+  .zip { display: inline-block; margin-top: 18px; padding: 10px 18px; background: var(--green); color: var(--cream); border-radius: 12px; text-decoration: none; }
+  footer { text-align: center; padding: 24px 16px 40px; color: var(--rose-dark); font-size: .9rem; }
+  @media (max-width: 760px) { main { grid-template-columns: 1fr; } aside { position: static; } .shots, .logos { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header role="img" aria-label="ChosenZen — Cada escolha, uma nova história."></header>
+<main>
+  <aside>
+    <h1>ChosenZen</h1>
+    <p class="tagline">Cada escolha, uma nova história.</p>
+    <dl>
+      <dt>Desenvolvedor</dt><dd>Estúdio Vívido (Brasil)</dd>
+      <dt>Lançamento</dt><dd>Demo do Capítulo 1 — outubro de 2026</dd>
+      <dt>Plataformas</dt><dd>Navegador (itch.io) e Windows</dd>
+      <dt>Preço</dt><dd>Demo gratuita · Jogo completo: R$ 19,90 (compra única, sem anúncios, sem assinatura, sem pay-to-win)</dd>
+      <dt>Gênero</dt><dd>Life sim narrativo de escolhas, com estratégia e RPG casual</dd>
+      <dt>Idioma</dt><dd>Português (Brasil)</dd>
+      <dt>Controles</dt><dd>Teclado ou controle</dd>
+      <dt>Duração da demo</dt><dd>Cerca de 5 minutos por partida, com desfechos diferentes a cada escolha</dd>
+      <dt>Engine</dt><dd>Godot 4</dd>
+    </dl>
+    <a class="zip" href="ChosenZen_presskit.zip">Baixar press kit (.zip)</a>
+  </aside>
+
+  <section>
+    <h2>Sobre o jogo</h2>
+    <blockquote>Hoje, a professora encontrou uma cola embaixo da sua carteira. Não era sua, mas ninguém acreditou. Você chega em casa cansado, e tudo o que quer é chegar ao seu quarto.</blockquote>
+    <p><strong>ChosenZen</strong> é um simulador de vida sobre reputação e caráter. Em vez de menus e listas, você vive cada fase da vida andando por cenários desenhados em pixel art e conversando com as pessoas da sua vida.</p>
+    <p>Cada conversa custa <strong>Energia</strong>, e cada resposta muda como os outros veem você, a sua <strong>Reputação</strong>. Ser atencioso cansa; poupar energia pode magoar quem você ama. Não existe resposta certa, só escolhas com consequências. O que você conta, esconde ou decide hoje à noite define como vai ser amanhã.</p>
+
+    <h2>Recursos</h2>
+    <ul>
+      <li><strong>Escolhas com custo real:</strong> Reputação e Energia puxam para lados opostos, e opções caras ficam bloqueadas quando você está exausto.</li>
+      <li><strong>Consequências que voltam:</strong> suas escolhas viram memórias que mudam as cenas seguintes e o desfecho do dia.</li>
+      <li><strong>Uma noite que passa de verdade:</strong> a luz, a música e os sons da casa mudam do fim de tarde até a madrugada.</li>
+      <li><strong>Movimento livre:</strong> ande pela casa, encontre as pessoas e descubra pequenos segredos, como o lanche na geladeira.</li>
+      <li><strong>Trilha e efeitos originais:</strong> música lo-fi criada para o jogo.</li>
+      <li><strong>Acessível:</strong> velocidade e tamanho do texto ajustáveis, volumes por canal, suporte a controle.</li>
+    </ul>
+
+    <h2>Imagens</h2>
+    <div class="shots">
+      <a href="screenshots/01_menu.png"><img src="screenshots/01_menu.png" alt="Menu inicial do ChosenZen com mãe e filho"></a>
+      <a href="screenshots/02_chegando_em_casa.png"><img src="screenshots/02_chegando_em_casa.png" alt="Chegando em casa no fim de tarde"></a>
+      <a href="screenshots/03_conversa_com_a_mae.png"><img src="screenshots/03_conversa_com_a_mae.png" alt="A mãe pergunta o que aconteceu"></a>
+      <a href="screenshots/04_escolha_e_memoria.png"><img src="screenshots/04_escolha_e_memoria.png" alt="Escolha com aviso de que a mãe vai lembrar"></a>
+      <a href="screenshots/05_noite.png"><img src="screenshots/05_noite.png" alt="A casa à noite, iluminada pelo abajur"></a>
+      <a href="screenshots/06_fim_do_dia.png"><img src="screenshots/06_fim_do_dia.png" alt="Resumo do fim do dia com as consequências"></a>
+    </div>
+
+    <h2>Logos e ícone</h2>
+    <div class="logos">
+      <figure><img src="logos/logo_chosenzen_transparente.png" alt="Logo ChosenZen"><figcaption>Logo do jogo</figcaption></figure>
+      <figure><img src="logos/logo_estudio_vivido_transparente.png" alt="Logo Estúdio Vívido"><figcaption>Logo do estúdio</figcaption></figure>
+      <figure><img src="logos/icone_256.png" alt="Ícone ChosenZen"><figcaption>Ícone</figcaption></figure>
+    </div>
+
+    <h2>Sobre o Estúdio Vívido</h2>
+    <p>"Ideias que ganham vida." O Estúdio Vívido é um estúdio independente brasileiro formado durante o curso de Games da FIAP. ChosenZen é o primeiro jogo do estúdio.</p>
+
+    <h2>Créditos</h2>
+    <p>Desenvolvido pelo Estúdio Vívido. Música e efeitos sonoros originais. Fonte Quicksand (SIL Open Font License). Feito com Godot Engine (licença MIT).</p>
+  </section>
+</main>
+<footer>© 2026 Estúdio Vívido · ChosenZen</footer>
+</body>
+</html>
